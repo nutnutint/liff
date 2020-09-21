@@ -123,7 +123,7 @@
       document.getElementById("userId").append(profile.userId)
       document.getElementById("statusMessage").append( profile.statusMessage ? profile.statusMessage : "N/A" )
       document.getElementById("displayName").append(profile.displayName)
-      document.getElementById("decodedIDToken").append( liff.getDecodedIDToken() ? liff.getDecodedIDToken().email ? liff.getDecodedIDToken().email : "N/A" : "N/A" )
+      document.getElementById("decodedIDToken").append( liff.getDecodedIDToken() ? liff.getDecodedIDToken().email ? liff.getDecodedIDToken().email : "N/A" : "not allow" )
     }
     
     function getEnvironment() {
@@ -147,7 +147,7 @@
         if (liff.isLoggedIn()) {
           getEnvironment()
           getUserProfile()
-          // getContext()
+          getContext()
           // getFriendship()
           // createUniversalLink()
         } else {
