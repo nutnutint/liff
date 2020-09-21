@@ -116,6 +116,7 @@
     }
 
     async function getUserProfile() {
+      console.log( "getUserProfile" );
       const profile = await liff.getProfile()
       let = blank_img = "https://icon-library.com/images/8468de0e9c.png"
       document.getElementById("pictureUrl").src = profile.pictureUrl ? profile.pictureUrl : blank_img
